@@ -12,14 +12,25 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Hello, world!</title>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #logo {
+            font-family: 'Sofia';
+            font-size: 30px;
+        }
+
+        a {
+            font-family: 'Sofia';
+        }
+    </style>
 
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"><span id="logo">Ankit</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,26 +38,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Check
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="aboutUs.html">About</a>
-                        <a class="dropdown-item" href="courses.html">Courese</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#courses">Courses&Skills</a>
                 </li>
             </ul>
         </div>
@@ -54,32 +47,39 @@
     <div id="showcase">
         <div class="container">
             <div class="showcase-content">
-               <h1>Ankit Here!</h1>
-                <button type="button" class="btn btn-outline-success"> <a href="aboutUs.html"> Success</a></button>
+                <h1>Ankit Here!<span style='font-size:50px;' onclick="typeWriter()"> &#128526;</span></h1>
+                <!-- <button type="button" class="btn btn-outline-success" onclick="typeWriter()"> <a href="aboutUs.html"> Success</a></button> -->
+                <p id="demo" style="font-size:40px;padding:20px;margin-top: 40px;color: darkturquoise;"></p>
+
 
             </div>
         </div>
     </div>
     <div class="carousel" data-flickity='{ "autoPlay": true }'>
-        <div class="carousel-cell">
-            <img src="./img/about.jpg" alt="image"/>
-            <button type="button" class="btn btn-success btn-block mb-5" >
-                Success</button>
+        <div class="carousel-cell" id="courses">
+            <img src="./img/about.jpg" alt="image" />
+            <button type="button" class="btn btn-success btn-block mb-5"><a href="courses.html">
+                    <span id="text">Check Courses</span></button></a>
         </div>
         <div class="carousel-cell">
-            <img src="./img/aboutus (2).jpg" alt="image">
-            <button type="button" class="btn btn-success btn-block mb-5" >
-                Success</button>
+            <img src="./img/aboutus (2).jpg" alt="image" />
+            <button type="button" class="btn btn-success btn-block mb-5"><a href="aboutUs.html">
+                    <span id="text">About Us</span></button>
         </div>
         <div class="carousel-cell">
-            
-            <img src="./img/aboutus (2).jpg" alt="image"/>
-            <button type="button" class="btn btn-success btn-block mb-5" >
-            Success</button>
+            <img src="./img/library.jpg" alt="image" />
+            <button type="button" class="btn btn-success btn-block  mb-5"><a
+                    href="https://github.com/Ankit-Developer143">
+                    My Github Profile</button></a>
         </div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div>
+    </div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted pt-4" style="display:flex;justify-content: center;">Created by Ankit Singh
+                &copy;2020</span>
+        </div>
+    </footer>
+
 
 
 
@@ -101,6 +101,24 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+
+
+        //  Autotype  .................... 
+        var i = 0;
+        var txt = 'Welcome To My Portfolio!';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("demo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+
+            }
+        }
+    </script>
 </body>
+
 
 </html>
