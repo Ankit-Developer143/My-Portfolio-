@@ -1,79 +1,44 @@
 
  
-
+/* background.................................................. */
 #showcase{
     background: url('./img/laptopman.jpg');
     background-repeat: no-repeat;  
     background-size: cover;
     width: 100%;
-    height: 50%;
+    height: 600px;
+    object-fit: cover;
  }
+
+ /* Text ........................ */
  .showcase-content{
      text-align: center;
-     padding-top: 20%;
+     padding-top: 30%;
    
      color: white;
      height: 1000px;  /*background image resize*/
  }
-
- @-webkit-keyframes typing { from { width: 0; } }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-
-h1,h3{ 
-    align-items: center;
-	font: bold 300% Consolas, Monaco, monospace;
-
-	width: 16.5em; 
-	width: 40ch;
-	margin-top: 40px;
-	white-space: nowrap;
-	overflow: hidden;
-  
-	-webkit-animation: typing 4s steps(21, end),
-	           blink-caret .5s step-end infinite alternate;
-}
-
-
-/* external css: flickity.css */
-
-* { box-sizing: border-box; }
-
-body { font-family: sans-serif; }
-
-.carousel {
-  background: black;
-  margin-bottom: 600px;
-  
-}
-
-.carousel img {
-    
-  display: block;
-  height: 100%;
-}
-
-
-@media screen and ( min-width: 768px ) {
-  .carousel img {
-    height: 400px;
-  }
-}
-
  
 
 
 
+
+
+ 
+
+/* Carousels............................................................................................. */
+
 .carousel-cell:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 0.5s;
-    radius: 10px;
+     animation: shake 0.5s;
+    radius: 10px; */
     
   
     /* When the animation is finished, start again */
     animation-iteration-count: infinite 5s;
-  }
+  } 
   
-  @keyframes shake {
+   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -85,18 +50,44 @@ body { font-family: sans-serif; }
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+  }  
 
 
 
   .img-fluid{
       width: 100%;
-      height: 300px;
+      height: 100%;
       object-fit: cover;
 
   }
 
+* { box-sizing: border-box; }
 
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+  margin-top: 5px;
+  background-color: rgba(53, 201, 201, 0.849);
+  border-radius: 5%;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 480px;
+  }
+}
+/* Carousels Ends............................................................................................. */
 
   /* aboutus---------------------------- */
 
@@ -104,6 +95,11 @@ body { font-family: sans-serif; }
     width: 100%;
     height: 18vw;
     object-fit: cover;
+}
+.img-fluid{
+  width: 100%;
+  height: 18vw;
+  object-fit: cover;
 }
 
 .mains{
@@ -123,6 +119,7 @@ body { font-family: sans-serif; }
 .outer{
     display: flex;
     
+    
 }
  .inner-container {
 	height: 430px;
@@ -137,11 +134,7 @@ body { font-family: sans-serif; }
 	-moz-box-shadow: -1px -1px 14px -4px rgba(0, 0, 0, 0.75);
 	box-shadow: -1px -1px 14px -4px rgba(0, 0, 0, 0.75);
 }
-/* h2{
-    text-align: center;
-    padding-bottom: 10%;
-}
-   */
+  
   .inner-container{
       background-color:cyan ;
   }
