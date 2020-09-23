@@ -190,6 +190,16 @@ h1:hover{
 
 }
 
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
 .carousel.is-fullscreen .carousel-cell-image {
   max-width: 100%;
 }
