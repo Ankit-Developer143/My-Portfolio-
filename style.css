@@ -82,7 +82,7 @@ body { font-family: sans-serif; }
 }
 
 .carousel-cell img {
- 
+  display: block;
   height: 200px;
   margin-top: 5px;
   background-color: rgba(53, 201, 201, 0.849);
@@ -188,6 +188,10 @@ h1:hover{
   
   
 
+}
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
 }
 
 
