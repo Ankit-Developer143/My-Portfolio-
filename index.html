@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,6 +25,9 @@
         a {
             font-family: 'Sofia';
         }
+/
+        
+
     </style>
 
 </head>
@@ -55,29 +59,35 @@
             </div>
         </div>
     </div>
-    <div class="carousel" data-flickity='{ "autoPlay": true,"fullscreen": true }'>
-        
-        <div class="carousel-cell" id="courses">
-            <img class="carousel-cell-image" src="./img/about.jpg" alt="image" />
-            <button type="button" class="btn btn-success btn-block mb-5"><a href="courses.html">
-                    <span id="text">Check Courses</span></button></a>
-        
-        </div>
-
-        <div class="carousel-cell">
-            <img class="carousel-cell-image" src="./img/aboutus (2).jpg" alt="image" />
-            <button type="button" class="btn btn-success btn-block mb-5"><a href="aboutUs.html">
-                    <span id="text">About Us</span></button>
-        
-        </div>
+   
     
+    <div class="carousel js-flickity" data-flickity='{ "autoPlay": true}'>
+        
+       
         <div class="carousel-cell">
-            <img class="carousel-cell-image" src="./img/library.jpg" alt="image" />
-            <button type="button" class="btn btn-success btn-block  mb-5"><a
-                    href="https://github.com/Ankit-Developer143">
-                Project Check</button></a
+        <div class="container">
+          <img src="./img/about.jpg" alt="orange tree" />
+          <button class="btn"><a href="courses.html">
+            <span id="text">Check Courses</span></button></a>
         </div>
-    </div>
+        </div>
+        <div class="carousel-cell">
+            <div class="container">
+              <img src="./img/aboutus (2).jpg" alt="orange tree" />
+              <button class="btn"><a href="aboutUs.html">
+                <span id="text">About Us</span></button>
+            </div>
+            </div>
+            <div class="carousel-cell">
+                <div class="container">
+                  <img src="./img/library.jpg" alt="orange tree" />
+                  <button class="btn"><a
+                    href="https://github.com/Ankit-Developer143">
+                Project Check</button></a>
+                </div>
+                </div>
+       
+        </div>
     </div>
     
     <footer class="footer mt-auto py-3">
@@ -109,7 +119,8 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script>
-
+    <script src="/path/to/flickity.pkgd.min.js"></script>
+<script>
 
         //  Autotype  .................... 
         var i = 0;
